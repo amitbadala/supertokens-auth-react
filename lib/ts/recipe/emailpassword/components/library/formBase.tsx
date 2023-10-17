@@ -52,6 +52,9 @@ export const FormBase: React.FC<FormBaseProps<any>> = (props) => {
     const [fieldStates, setFieldStates] = useState<FieldState[]>(
         props.formFields.map((f) => ({ id: f.id, value: "" }))
     );
+
+    console.log(props, "TESTING PROPSS");
+
     const [isLoading, setIsLoading] = useState(false);
 
     const updateFieldState = useCallback(
