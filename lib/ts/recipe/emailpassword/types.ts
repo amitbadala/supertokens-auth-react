@@ -288,6 +288,11 @@ export type FormFieldThemeProps = NormalisedFormField & {
      * Clears the field after calling the API.
      */
     clearOnSubmit?: boolean;
+
+    /*
+     * Adds custom component
+     */
+    customComponent?: React.ReactNode;
 };
 
 export type FormFieldError = {

@@ -207,8 +207,11 @@ export const FormBase: React.FC<FormBaseProps<any>> = (props) => {
                                 ) : (
                                     <Label value={field.label} showIsRequired={field.showIsRequired} />
                                 ))}
-
-                            {field.inputComponent !== undefined ? (
+                            {field.customComponent !== undefined ? (
+                                // Render customComponent if it exists
+                                field.customComponent
+                            ) : field.inputComponent !== undefined ? (
+                                // Render inputComponent if it exists
                                 <field.inputComponent
                                     type={type}
                                     name={field.id}
@@ -237,7 +240,6 @@ export const FormBase: React.FC<FormBaseProps<any>> = (props) => {
                                     hasError={fstate.error !== undefined}
                                 />
                             )}
-
                             {fstate.error && <InputError error={fstate.error} />}
                         </Fragment>
                     </FormRow>

@@ -37,6 +37,7 @@ export const SignUpForm = withOverride(
         }
     ): JSX.Element {
         const userContext = useUserContext();
+        console.log(props.formFields, "FORM FIELDs");
 
         return (
             <FormBase

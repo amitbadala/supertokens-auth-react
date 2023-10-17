@@ -147,6 +147,7 @@ export declare type FormFieldThemeProps = NormalisedFormField & {
     inputComponent?: React.FC<InputProps>;
     showIsRequired?: boolean;
     clearOnSubmit?: boolean;
+    customComponent?: React.ReactNode;
 };
 export declare type FormFieldError = {
     id: string;
